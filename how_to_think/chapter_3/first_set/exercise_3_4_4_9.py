@@ -1,6 +1,6 @@
-a = 5
-b = 3
-c = 4
+a = 4
+b = 5
+c = 3
 
 if a > c:
     a, c = c, a     # swap values of a and c so a is smaller than c
@@ -13,7 +13,7 @@ if b > c:
 hypotenuse = (a * a + b * b) ** .5
 
 # The exercise asks for a function but we will not talk about functions until next week
-# This solution therefor is not exactly what the exercise asked for but it is in the same spirit
+# This solution therefore is not exactly what the exercise asked for but it is in the same spirit
 if abs(c - hypotenuse) < 1e-7:
     print("The triangle is right-angled")
 else:
