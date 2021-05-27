@@ -2,6 +2,9 @@ import turtle, math, random
 
 
 # https://stackoverflow.com/questions/7198144/how-to-draw-a-n-sided-regular-polygon-in-cartesian-coordinates#7198179
+from sessions.week_4.mandala_2 import square_curl
+
+
 def polygon(michelangelo, number_of_sides, radius, center_x=0, center_y=0):
 
     for n in range(number_of_sides + 1):
@@ -27,6 +30,8 @@ for x in reversed(range(3, 14)):
     monk.begin_fill()
     polygon(monk, x, 4 * (1.44 ** x))
     monk.end_fill()
+
+square_curl(monk, 4)
 
 monk.hideturtle()
 mandala.exitonclick()

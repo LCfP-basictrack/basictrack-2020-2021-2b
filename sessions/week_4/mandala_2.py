@@ -30,20 +30,21 @@ def make_window():
     return window
 
 
-jianju = turtle.Turtle()
-screen = make_window()
+if __name__ == '__main__':
+    jianju = turtle.Turtle()
+    screen = make_window()
 
-jianju.speed(0)
+    jianju.speed(0)
 
-element_length = 25
-direction = 1
-bottom_left(jianju, element_length)
-for square in range(1, 5):
-    for _ in range(4):
-        for _ in range(2 ** square):
-            jianju.forward(element_length)
-            square_curl(jianju, element_length - 1, 4/3)
-        jianju.left(90)
-    bottom_left(jianju, element_length * 2 ** (square - 1))
+    element_length = 25
+    direction = 1
+    bottom_left(jianju, element_length)
+    for square in range(1, 5):
+        for _ in range(4):
+            for _ in range(2 ** square):
+                jianju.forward(element_length)
+                square_curl(jianju, element_length - 1, 4/3)
+            jianju.left(90)
+        bottom_left(jianju, element_length * 2 ** (square - 1))
 
-screen.exitonclick()
+    screen.exitonclick()
